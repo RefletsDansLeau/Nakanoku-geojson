@@ -5,7 +5,7 @@
       "type": "Feature",
       "properties": {
         "CITY_NAME": "Minamidai_1",
-        "KEYCODE1": "114001001"
+        "KEYCODE1": 114001001
       },
       "geometry": {
         "type": "Polygon",
@@ -1413,7 +1413,7 @@
       "type": "Feature",
       "properties": {
         "CITY_NAME": "Minamidai_5",
-        "KEYCODE1": "114001005"
+        "KEYCODE1": 114001005
       },
       "geometry": {
         "type": "Polygon",
@@ -7411,7 +7411,7 @@
       "type": "Feature",
       "properties": {
         "CITY_NAME": "Chuo_5",
-        "KEYCODE1": "114004005"
+        "KEYCODE1": 114004005
       },
       "geometry": {
         "type": "Polygon",
@@ -8255,7 +8255,7 @@
       "type": "Feature",
       "properties": {
         "CITY_NAME": "Higashinakano_2",
-        "KEYCODE1": "114005002"
+        "KEYCODE1": 114005002
       },
       "geometry": {
         "type": "Polygon",
@@ -28081,7 +28081,7 @@
       "type": "Feature",
       "properties": {
         "CITY_NAME": "Kamisaginomiya_5",
-        "KEYCODE1": "114019005"
+        "KEYCODE1": 114019005
       },
       "geometry": {
         "type": "Polygon",
