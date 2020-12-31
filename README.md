@@ -99,3 +99,33 @@
 <li>	114019004	上鷺宮４丁目	</li>
 <li>	114019005	上鷺宮５丁目	</li>
 </ul>
+
+<h2>Pythonでコロプレス図を書く際のコード例(2020/12/31追記)</h2>
+モジュールをインポートする。<br>
+import folium<br>
+import pandas as pd<br>
+import json<br>
+
+ex_data=pd.read_excel(' ./Nakano_data.xlsx')　人口データ(Excelファイル)を読み込む。<br>
+
+json_open=open('nakano_ku_chouchoubetu3.json','r')<br>
+nakano_geodata=json.load(json_open)　中野区の緯度・経度情報を開いて、読み込む。<br>
+
+ここからベースとなる地図を描く。<br>
+nakano_loc=[35.70,139.66]地図の中心となる緯度経度を指定し(ここでは中野区)<br>
+Nakano_choropleth=folium.Map(location=nakano_loc,zoom_start=13)地図の尺度を指定<br>
+
+ベースの地図にコロプレス図を重ねる<br>
+folium.Choropleth(<br>
+    geo_data=nakano_geodata,　　中野区町丁別境界データ<br>
+    data=ex_data,　　　　　　　　色塗りの基準となるデータおよび行政コード<br>
+    columns=['KEYCODE1','ratio'],　利用するエクセルの列名（行政コードと０歳人口）<br>
+    key_on='feature.properties.KEYCODE1',　 geoJSONファイルの「行政コード」を指定<br>
+    threshold_schale=[0,2000,4000,8000],　色の塗り分け指定<br>
+    fill_color='YlGnBu',　塗りつぶしのカラーパレットの色<br>
+    reset=True,<br>
+    errors='ignore'<br>
+).add_to(Nakano_choropleth)　　ベースの地図に加える<br>
+
+Nakano_choropleth.save(outfile="./Nakanoku_choropleth.html")　htmlファイルで保存<br>
+
