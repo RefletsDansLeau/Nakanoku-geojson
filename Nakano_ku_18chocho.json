@@ -5,7 +5,7 @@
             "type": "Feature",
             "properties": {
                 "CITY_NAME": "Kamitakada",
-                "KEYCODE1": 1140070
+                "KEYCODE1": 114007
             },
             "geometry": {
                 "type": "Polygon",
@@ -71,7 +71,7 @@
             "type": "Feature",
             "properties": {
                 "CITY_NAME": "Higashinakano",
-                "KEYCODE1": 1140050
+                "KEYCODE1": 114005
             },
             "geometry": {
                 "type": "Polygon",
@@ -125,7 +125,7 @@
             "type": "Feature",
             "properties": {
                 "CITY_NAME": "Chuo",
-                "KEYCODE1": 1140040
+                "KEYCODE1": 114004
             },
             "geometry": {
                 "type": "Polygon",
@@ -187,7 +187,7 @@
             "type": "Feature",
             "properties": {
                 "CITY_NAME": "Honcho",
-                "KEYCODE1": 1140030
+                "KEYCODE1": 114003
             },
             "geometry": {
                 "type": "Polygon",
@@ -261,7 +261,7 @@
             "type": "Feature",
             "properties": {
                 "CITY_NAME": "Yayoicho",
-                "KEYCODE1": 1140020
+                "KEYCODE1": 114002
             },
             "geometry": {
                 "type": "Polygon",
@@ -355,7 +355,7 @@
             "type": "Feature",
             "properties": {
                 "CITY_NAME": "Minamidai",
-                "KEYCODE1": 1140010
+                "KEYCODE1": 114001
             },
             "geometry": {
                 "type": "Polygon",
@@ -461,7 +461,7 @@
             "type": "Feature",
             "properties": {
                 "CITY_NAME": "Nakano",
-                "KEYCODE1": 1140060
+                "KEYCODE1": 114006
             },
             "geometry": {
                 "type": "Polygon",
@@ -567,7 +567,7 @@
             "type": "Feature",
             "properties": {
                 "CITY_NAME": "Kamisaginomiya",
-                "KEYCODE1": 1140190
+                "KEYCODE1": 114019
             },
             "geometry": {
                 "type": "Polygon",
@@ -625,7 +625,7 @@
             "type": "Feature",
             "properties": {
                 "CITY_NAME": "Saginomiya",
-                "KEYCODE1": 1140180
+                "KEYCODE1": 114018
             },
             "geometry": {
                 "type": "Polygon",
@@ -699,7 +699,7 @@
             "type": "Feature",
             "properties": {
                 "CITY_NAME": "Eharacho",
-                "KEYCODE1": 1140110
+                "KEYCODE1": 114011
             },
             "geometry": {
                 "type": "Polygon",
@@ -801,7 +801,7 @@
             "type": "Feature",
             "properties": {
                 "CITY_NAME": "Egoda",
-                "KEYCODE1": 1140120
+                "KEYCODE1": 114012
             },
             "geometry": {
                 "type": "Polygon",
@@ -931,7 +931,7 @@
             "type": "Feature",
             "properties": {
                 "CITY_NAME": "Matsugaoka",
-                "KEYCODE1": 1140100
+                "KEYCODE1": 114010
             },
             "geometry": {
                 "type": "Polygon",
@@ -1021,7 +1021,7 @@
             "type": "Feature",
             "properties": {
                 "CITY_NAME": "Maruyama",
-                "KEYCODE1": 1140130
+                "KEYCODE1": 114013
             },
             "geometry": {
                 "type": "Polygon",
@@ -1075,7 +1075,7 @@
             "type": "Feature",
             "properties": {
                 "CITY_NAME": "Shirasagi",
-                "KEYCODE1": 1140170
+                "KEYCODE1": 114017
             },
             "geometry": {
                 "type": "Polygon",
@@ -1169,7 +1169,7 @@
             "type": "Feature",
             "properties": {
                 "CITY_NAME": "Wakamiya",
-                "KEYCODE1": 1140160
+                "KEYCODE1": 114016
             },
             "geometry": {
                 "type": "Polygon",
@@ -1275,7 +1275,7 @@
             "type": "Feature",
             "properties": {
                 "CITY_NAME": "Yamatocho",
-                "KEYCODE1": 1140150
+                "KEYCODE1": 114015
             },
             "geometry": {
                 "type": "Polygon",
@@ -1369,7 +1369,7 @@
             "type": "Feature",
             "properties": {
                 "CITY_NAME": "numabukuro",
-                "KEYCODE1": 1140090
+                "KEYCODE1": 114009
             },
             "geometry": {
                 "type": "Polygon",
@@ -1519,7 +1519,7 @@
             "type": "Feature",
             "properties": {
                 "CITY_NAME": "Arai",
-                "KEYCODE1": 1140080
+                "KEYCODE1": 114008
             },
             "geometry": {
                 "type": "Polygon",
@@ -1645,7 +1645,7 @@
             "type": "Feature",
             "properties": {
                 "CITY_NAME": "Nogata",
-                "KEYCODE1": 1140140
+                "KEYCODE1": 114014
             },
             "geometry": {
                 "type": "Polygon",
