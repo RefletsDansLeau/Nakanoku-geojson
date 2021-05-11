@@ -1,10 +1,11 @@
-<h1>Nakano_ku_chouchoubetu3.json</h1>
+<h1>①Nakano_ku_chouchoubetu3.json</h1>
 <p>中野区町丁別の境界データのgeojsonデータです。<br>ご自由にお使いください。ただし、コードを使って生じたいかなる問題にも責任を負いません。</p>
 <p>データ元は、「（日本）政府統計の総合窓口（<a href="https://www.e-stat.go.jp/gis">ｅ－Ｓｔａｔ</a>）／地図で見る統計(統計GIS)／境界データ」でダウンロードしたShapeファイルを使用しています。</p>
 <p>Shapeファイルをgeojsonデータに変換し、ファイルサイズを小さくするために、CITY_NAME、KEYCODE1、緯度経度以外を削除し「right-hand rule」ツールで変換しました。</p>
 <p>[2020/10/4追記]Pythonのjson.loadで読み込めるように、町名を日本語→英語表記に変えました。</p>
 <p>[2020/10/7追記] Python／folium／コロプレス図で色がつかない箇所があったので、KEYCODE1(行政コード)の数値のダブルクオテーションを取りました。</p>
-
+<h1>②Nakano_ku_18chocho.json</h1>
+<p>中野区18町丁別の境界データのgeojsonデータです。手書きですので粗いです。</p>
 
 <p>行政コード（geoJSON内の“KEYCODE1”）は次の通りです。</p>
 <ul>
