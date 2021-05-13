@@ -117,7 +117,6 @@
 <li>114018	鷺宮</li>
 <li>114019	上鷺宮</li>
 </ul>
-![image](https://user-images.githubusercontent.com/52129157/118077277-c5612b00-b3ee-11eb-99f7-1922ad24a762.png)
 
 
 <h2>作成のきっかけ</h2>
