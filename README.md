@@ -5,7 +5,9 @@
 <p>[2020/10/4追記]Pythonのjson.loadで読み込めるように、町名を日本語→英語表記に変えました。</p>
 <p>[2020/10/7追記] Python／folium／コロプレス図で色がつかない箇所があったので、KEYCODE1(行政コード)の数値のダブルクオテーションを取りました。</p>
 <h1>②Nakano_ku_18chocho.json</h1>
-<p>中野区18町丁別の境界データのgeojsonデータです。手書きなので粗いです。</p>
+<p>中野区18町丁別の境界データのgeojsonデータです。https://geojson.io/ で手書きしました。</p>
+![image](https://user-images.githubusercontent.com/52129157/118077035-4cfa6a00-b3ee-11eb-8c5f-5d67946dacad.png)
+
 
 <h2>行政コード（geoJSON内の“KEYCODE1”）は次の通りです。</h2>
 <ul>
