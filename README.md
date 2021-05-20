@@ -1,11 +1,11 @@
 <h1>①Nakano_ku_85chocho.json</h1>
 <p>中野区85町丁別の境界データのgeojsonです。<br>ご自由にお使いください。ただし、コードを使って生じたいかなる問題にも責任を負いません。</p>
-<p>出典は「（日本）政府統計の総合窓口（<a href="https://www.e-stat.go.jp/gis">ｅ－Ｓｔａｔ</a>）／地図で見る統計(統計GIS)／境界データ」でダウンロードしたShapeファイルを加工したものです。</p>
-<p>加工内容は、ShapeファイルをPythonで変換し、エディタで括弧等の修正を行い、ファイルサイズを小さくするために、CITY_NAME、KEYCODE1、緯度経度以外を削除し「right-hand rule」ツールで変換しました。</p>
+<p>出典は「政府統計の総合窓口（<a href="https://www.e-stat.go.jp/gis">ｅ－Ｓｔａｔ</a>）／地図で見る統計(統計GIS)／境界データ」です。<br>ダウンロードしたShapeファイルを加工して作成しました。なお、加工データをGitHubにアップロードする旨については出典元へ問い合わせ済みです。</p>
+<p>加工内容は、ShapeファイルをPythonのpyshpで読み込のだのち、エディタで括弧等の修正を行いjson形式にし、ファイルサイズを小さくするために、CITY_NAME、KEYCODE1、緯度経度以外を削除し、「right-hand rule」ツールで変換しました。</p>
 <p>[2020/10/4追記]Pythonのjson.loadで読み込めるように、町名を日本語→英語表記に変えました。</p>
 <p>[2020/10/7追記] Python／folium／コロプレス図で色がつかない箇所があったので、KEYCODE1(行政コード)の数値のダブルクオテーションを取りました。</p>
 <h1>②Nakano_ku_18chocho.json</h1>
-<p>中野区18町別の境界データのgeojsonです。https://geojson.io/ で手書きしました。</p>
+<p>中野区18町別の境界データのgeojsonです。https://geojson.io/ で手書きしました。手書きなので、細部は荒いです。</p>
 ![image](https://user-images.githubusercontent.com/52129157/118077035-4cfa6a00-b3ee-11eb-8c5f-5d67946dacad.png)
 
 
@@ -122,32 +122,28 @@
 <h2>作成のきっかけ</h2>
 <p>子どもが多いエリアに保育園を誘致してほしいと思ったので、統計書で公開されている子どもの数をpythonで地図上に可視化してみようと思いました。町々別の境界データ（geoJSON）が無かったため、試行錯誤を重ねて整形しました。</p>
 
-<h2>Pythonでコロプレス図を書く際のコード例(2020/12/31追記)</h2>
-モジュールをインポートする。<br>
+<h2>Google Colab／Pythonでコロプレス図を書く際のコード例(2021/5/20変更)</h2>
 import folium<br>
 import pandas as pd<br>
 import json<br>
 
-ex_data=pd.read_excel(' ./Nakano_data.xlsx')　人口データ(Excelファイル)を読み込む。<br>
+境界データを取り込む ※コードを実行する前にページの左端にあるファイルのアイコンを押して、ファイルをアップロードする。<br>
+json_data='Nakano_ku_18chocho.json'<br>
 
-json_open=open('nakano_ku_chouchoubetu3.json','r')<br>
-nakano_geodata=json.load(json_open)　中野区の緯度・経度情報を開いて、読み込む。<br>
+人口データ(Excelファイル)を読み込む。※コードを実行する前にページの左端にあるファイルのアイコンを押して、ファイルをアップロードする。<br>
+excel_data = pd.read_excel('ファイル名.xlsx', sheet_name='シート名')<br>
 
 ここからベースとなる地図を描く。<br>
-nakano_loc=[35.70,139.66]　地図の中心となる緯度経度を指定し(ここでは中野区)<br>
-Nakano_choropleth=folium.Map(location=nakano_loc,zoom_start=13)　地図の尺度を指定<br>
+nakano_loc=[35.70,139.66]　地図の中心となる緯度経度を指定(ここでは中野区)<br>
+m = folium.Map(location=nakano_loc,tiles='OpenStreetMap',zoom_start=13) 　地図の尺度を指定<br>
 
 ベースの地図にコロプレス図を重ねる<br>
-folium.Choropleth(<br>
-    geo_data=nakano_geodata,　　中野区町丁別境界データ<br>
-    data=ex_data,　　　　　　　　色塗りの基準となるデータおよび行政コード<br>
-    columns=['KEYCODE1','該当列'],　利用するエクセルの列名（行政コードと０歳人口）<br>
-    key_on='feature.properties.KEYCODE1',　 geoJSONファイルの「行政コード」を指定<br>
-    threshold_schale=[0,2000,4000,8000],　色の塗り分け指定<br>
-    fill_color='YlGnBu',　塗りつぶしのカラーパレットの色<br>
-    reset=True,<br>
-    errors='ignore'<br>
-).add_to(Nakano_choropleth)　　ベースの地図に加える<br>
+folium.Choropleth(
+    geo_data=json_data,　　境界データを指定
+    key_on='feature.properties.KEYCODE1',　　境界データ(geoJSONファイル)の「行政コード」が書かれた列名を指定
+    data=excel_data,　　　　色塗りの基準となるデータ(ここではエクセル)を指定
+    columns=['KEYCODE1','value'],　エクセルの列を指定（行政コード＆色塗りの基準となる数値）
+    fill_color='YlGnBu'　塗りつぶしのカラーパレットの色
+).add_to(m)
 
-Nakano_choropleth.save(outfile="./Nakanoku_choropleth.html")　htmlファイルで保存<br>
-
+m.save('任意のファイル名.html')　適当な名前をつけてhtmlで保存
