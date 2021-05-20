@@ -1,4 +1,4 @@
-<h1>①Nakano_ku_chocho.json</h1>
+<h1>①Nakano_ku_85chocho.json</h1>
 <p>中野区85町丁別の境界データのgeojsonです。<br>ご自由にお使いください。ただし、コードを使って生じたいかなる問題にも責任を負いません。</p>
 <p>出典は「（日本）政府統計の総合窓口（<a href="https://www.e-stat.go.jp/gis">ｅ－Ｓｔａｔ</a>）／地図で見る統計(統計GIS)／境界データ」でダウンロードしたShapeファイルを加工したものです。</p>
 <p>加工内容は、ShapeファイルをPythonで変換し、エディタで括弧等の修正を行い、ファイルサイズを小さくするために、CITY_NAME、KEYCODE1、緯度経度以外を削除し「right-hand rule」ツールで変換しました。</p>
