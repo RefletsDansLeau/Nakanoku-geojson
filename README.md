@@ -138,7 +138,7 @@ nakano_loc=[35.70,139.66]　地図の中心となる緯度経度を指定(ここ
 m = folium.Map(location=nakano_loc,tiles='OpenStreetMap',zoom_start=13) 　地図の尺度を指定<br>
 
 ベースの地図にコロプレス図を重ねる<br>
-folium.Choropleth(
+folium.Choropleth(<br>
     geo_data=json_data,　　境界データを指定<br>
     key_on='feature.properties.KEYCODE1',　　境界データ(geoJSONファイル)の「行政コード」が書かれた列名を指定<br>
     data=excel_data,　　　　色塗りの基準となるデータ(ここではエクセル)を指定<br>
