@@ -139,11 +139,11 @@ m = folium.Map(location=nakano_loc,tiles='OpenStreetMap',zoom_start=13) 　地�
 
 ベースの地図にコロプレス図を重ねる<br>
 folium.Choropleth(
-    geo_data=json_data,　　境界データを指定
-    key_on='feature.properties.KEYCODE1',　　境界データ(geoJSONファイル)の「行政コード」が書かれた列名を指定
-    data=excel_data,　　　　色塗りの基準となるデータ(ここではエクセル)を指定
-    columns=['KEYCODE1','value'],　エクセルの列を指定（行政コード＆色塗りの基準となる数値）
-    fill_color='YlGnBu'　塗りつぶしのカラーパレットの色
-).add_to(m)
-
+    geo_data=json_data,　　境界データを指定<br>
+    key_on='feature.properties.KEYCODE1',　　境界データ(geoJSONファイル)の「行政コード」が書かれた列名を指定<br>
+    data=excel_data,　　　　色塗りの基準となるデータ(ここではエクセル)を指定<br>
+    columns=['KEYCODE1','value'],　エクセルの列を指定（行政コード＆色塗りの基準となる数値）<br>
+    fill_color='YlGnBu'　塗りつぶしのカラーパレットの色<br>
+).add_to(m)<br>
+<br>
 m.save('任意のファイル名.html')　適当な名前をつけてhtmlで保存
