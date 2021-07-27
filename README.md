@@ -6,7 +6,9 @@
 <p>[2020/10/7追記] Python／folium／コロプレス図で色がつかない箇所があったので、KEYCODE1(行政コード)の数値のダブルクオテーションを取りました。</p>
 <h1>②Nakano_ku_18chocho.json</h1>
 <p>中野区18町別の境界データのgeojsonです。https://geojson.io/ で手書きしました。手書きなので、細部は荒いです。</p>ご自由にお使いください。ただし、コードを使って生じたいかなる問題にも責任を負いません。
-![image](https://user-images.githubusercontent.com/52129157/118077035-4cfa6a00-b3ee-11eb-8c5f-5d67946dacad.png)
+<h1>②Nakano_ku.json</h1>
+<p>中野区の境界データのgeojsonです。https://geojson.io/ で手書きしました。手書きなので、細部は荒いです。</p>ご自由にお使いください。ただし、コードを使って生じたいかなる問題にも責任を負いません。
+
 
 
 <h2>行政コード（geoJSON内の“KEYCODE1”）は次の通りです。</h2>
