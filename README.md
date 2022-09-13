@@ -130,10 +130,10 @@ import pandas as pd<br>
 import json<br>
 
 境界データを取り込む ※コードを実行する前にページの左端にあるファイルのアイコンを押して、ファイルをアップロードする。<br>
-json_data='Nakano_ku_18chocho.json'<br>
+json_data='/Nakano_ku_18chocho.json'<br>
 
 人口データ(Excelファイル)を読み込む。※コードを実行する前にページの左端にあるファイルのアイコンを押して、ファイルをアップロードする。<br>
-excel_data = pd.read_excel('ファイル名.xlsx', sheet_name='シート名')<br>
+excel_data = pd.read_excel('/ファイル名.xlsx', sheet_name='シート名')<br>
 
 ここからベースとなる地図を描く。<br>
 nakano_loc=[35.70,139.66]　地図の中心となる緯度経度を指定(ここでは中野区)<br>
