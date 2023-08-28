@@ -130,7 +130,7 @@ Python等で本ページのJSONデータを読み込む際は「raw」ボタン�
 <h2>作成のきっかけ</h2>
 <p>子どもが多いエリアに保育園を誘致してほしいと思ったので、統計書で公開されている子どもの数をpythonで地図上に可視化してみようと思いました。町々別の境界データ（geoJSON）が無かったため、試行錯誤を重ねて整形しました。</p>
 
-<h2>Google Colab／Pythonでコロプレス図を書く際のコード例(2021/5/20変更)</h2>
+<h2>Google Colab／Pythonでコロプレス図を書く際のコード例(2023/8/28変更)</h2>
 import folium<br>
 import pandas as pd<br>
 import json<br>
