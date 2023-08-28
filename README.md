@@ -135,8 +135,8 @@ import folium<br>
 import pandas as pd<br>
 import json<br>
 
-境界データを取り込む ※コードを実行する前にページの左端にあるファイルのアイコンを押して、ファイルをアップロードする。<br>
-json_data='nakano_ku_18cho.json'<br>
+境界データを取り込む<br>Python等で本ページのJSONデータを読み込む際は「raw」ボタンを押した際に表示されるURLを記載ください。<br> 
+json_data='https://raw.githubusercontent.com/XXXXXXXXXXXX.json'<br>
 
 人口データ(Excelファイル)を読み込む。※コードを実行する前にページの左端にあるファイルのアイコンを押して、ファイルをアップロードする。<br>
 excel_data = pd.read_excel('ファイル名.xlsx', sheet_name='シート名')<br>
